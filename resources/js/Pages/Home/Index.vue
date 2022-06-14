@@ -1,11 +1,11 @@
 <template>
     <div>
-        <Navbar></Navbar>
+        <Navbar class="sticky-top"></Navbar>
         <section>
             <div class="container py-5">
                 <div class="row">
                     <div class="col-md-4 mb-4">
-                        <div class=" sticky">
+                        <div class="">
                             <div class="d-flex justify-content-between">
                                 <p class="small">สินค้าขายดี</p>
                                 <p class="small"><a href="#">ดูทั้งหมด</a></p>
@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-md-12 mb-3 text-center"><h4><b>หนังสือน่าอ่าน ที่ไม่ควรพลาด !!</b></h4></div>
                             <div v-for="index in 8" class="col-md-3 mb-4 mb-lg-0">
-                                <div class="card" style="border: none;">
+                                <div class="card mb-3" style="border: none;">
                                     <img height="200" src="https://storage.naiin.com/system/application/bookstore/resource/product/202205/548160/1000248652_front_XXL.jpg?imgname=%E0%B9%81%E0%B8%9F%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%9A%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1-6-(%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1%E0%B8%88%E0%B8%9A)"
                                         class="card-img-top" alt="Laptop" />
                                     <div class="mt-3">
@@ -65,11 +65,11 @@
                                             250.00 บาท
                                         </span>
                                         <div class="d-flex flex-row mt-4">
-                                            <button type="button" class="btn btn-info flex-fill ms-1" style="border-radius: 30px;">Add to cart</button>
+                                            <button type="button" class="btn btn-primary flex-fill ms-1" style="border-radius: 30px;">Add to cart</button>
                                         </div>
                                     </div>
                                 </div>
-                                <span class="badge badge-range">{{index}}</span>
+                                
                             </div>
                         </div>
                     </div>

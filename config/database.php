@@ -62,6 +62,11 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn'=>'mongodb+srv://Duangkamol_c123:a12345678@cluster0.4cpd8.mongodb.net/test',
+            'database' => 'book',
+        ],
 
         'pgsql' => [
             'driver' => 'pgsql',

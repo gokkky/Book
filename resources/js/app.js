@@ -16,7 +16,7 @@ InertiaProgress.init();
         })
     });
 
-    app.config.globalProperties.$route = window.route;
-    app.provide('$route', window.route);
+    app.config.globalProperties.route = window.route;
+    app.provide('route', window.route);
 
     app.use(plugin).mount(el);
