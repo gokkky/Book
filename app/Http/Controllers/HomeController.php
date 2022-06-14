@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Card;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Home/Index');
+        $count = Card::count();
+        return Inertia::render('Home/Index', [
+            'count' => $count
+        ]);
     }
 
     /**

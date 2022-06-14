@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Card;
 
 class ShoppingCartController extends Controller
 {
@@ -14,12 +15,24 @@ class ShoppingCartController extends Controller
      */
     public function index()
     {
+        
+        
         return Inertia::render('Cart/Index');
     }
 
     public function pay()
     {
         return Inertia::render('Cart/Pay');
+    }
+
+    public function addCard()
+    {
+        $card = new Card;
+        $card->book_id = 1;
+        $card->save();
+        // $count = 2;
+
+        return redirect()->back();
     }
 
     /**

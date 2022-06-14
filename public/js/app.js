@@ -15222,15 +15222,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
-// import BreezeNavLink from "@/Components/NavLink.vue";
-// import { Head } from "@inertiajs/inertia-vue3";
-// import { Link } from "@inertiajs/inertia-vue3";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {// BreezeAuthenticatedLayout,
-    // Head,
-    // BreezeNavLink,
-    // Link,
+  components: {},
+  props: {
+    count: Number
   },
   mounted: function mounted() {},
   data: function data() {
@@ -15260,7 +15255,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {},
   methods: {
-    submit: function submit(code) {
+    submit: function submit() {
       this.$inertia.get(this.route('cart.pay'), {});
     }
   }
@@ -15302,16 +15297,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/Navbar */ "./resources/js/Layouts/Navbar.vue");
-// import {inject, reactive} from "vue";
-// import {Inertia} from "@inertiajs/inertia";
-// import {usePage} from "@inertiajs/inertia-vue3";
-// import Navbar from '@Pages/Home/Navbar'
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     Navbar: _Layouts_Navbar__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  props: {// errors: Object
+  props: {
+    count: Number
+  },
+  data: function data() {
+    return {
+      countTotal: this.count ? this.count : 0
+    };
+  },
+  methods: {
+    addCart: function addCart() {
+      this.$inertia.get(this.route('add.card'));
+    }
   }
 });
 
@@ -15383,15 +15385,11 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_11 = {
   "class": "badge badge-notify"
-}, "3", -1
-/* HOISTED */
-);
+};
 
-var _hoisted_12 = [_hoisted_10, _hoisted_11];
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "nav-item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   "class": "nav-link",
@@ -15414,9 +15412,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   , _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "nav-link",
     href: _ctx.route('cart.index')
-  }, _hoisted_12, 8
+  }, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.count), 1
+  /* TEXT */
+  )], 8
   /* PROPS */
-  , _hoisted_9)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("<li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"#\">เข้าสู่ระบบ </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"#\">ลงทะเบียน </a>\r\n                        </li>"), _hoisted_13])])])])]);
+  , _hoisted_9)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("<li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"#\">เข้าสู่ระบบ </a>\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            <a class=\"nav-link\" href=\"#\">ลงทะเบียน </a>\r\n                        </li>"), _hoisted_12])])])])]);
 }
 
 /***/ }),
@@ -15645,21 +15645,54 @@ var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 var _hoisted_13 = {
   "class": "col-md-3 mb-4 mb-lg-0"
 };
+var _hoisted_14 = {
+  "class": "card mb-3",
+  style: {
+    "border": "none"
+  }
+};
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"card mb-3\" style=\"border:none;\"><img height=\"200\" src=\"https://storage.naiin.com/system/application/bookstore/resource/product/202205/548160/1000248652_front_XXL.jpg?imgname=%E0%B9%81%E0%B8%9F%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%9A%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1-6-(%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1%E0%B8%88%E0%B8%9A)\" class=\"card-img-top\" alt=\"Laptop\"><div class=\"mt-3\"><div><span>แฟ้มคดีกรมปราบปีศาจ เล่ม 6 (เล่มจบ)</span><br><span class=\"text-secondary small\">เมิ่งซีสือ</span></div><div class=\"d-flex mb-2 small mt-2\"><div class=\"ms-auto text-warning\"><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i></div></div><span class=\"small text-danger\"><s>500.25 บาท</s></span><span> 250.00 บาท </span><div class=\"d-flex flex-row mt-4\"><button type=\"button\" class=\"btn btn-primary flex-fill ms-1\" style=\"border-radius:30px;\">Add to cart</button></div></div></div>", 1);
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  height: "200",
+  src: "https://storage.naiin.com/system/application/bookstore/resource/product/202205/548160/1000248652_front_XXL.jpg?imgname=%E0%B9%81%E0%B8%9F%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%9A%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1-6-(%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1%E0%B8%88%E0%B8%9A)",
+  "class": "card-img-top",
+  alt: "Laptop"
+}, null, -1
+/* HOISTED */
+);
 
-var _hoisted_15 = [_hoisted_14];
+var _hoisted_16 = {
+  "class": "mt-3"
+};
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><span>แฟ้มคดีกรมปราบปีศาจ เล่ม 6 (เล่มจบ)</span><br><span class=\"text-secondary small\">เมิ่งซีสือ</span></div><div class=\"d-flex mb-2 small mt-2\"><div class=\"ms-auto text-warning\"><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i><i class=\"fa fa-star\"></i></div></div><span class=\"small text-danger\"><s>500.25 บาท</s></span><span> 250.00 บาท </span>", 4);
+
+var _hoisted_21 = {
+  "class": "d-flex flex-row mt-4"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Navbar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Navbar");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar, {
-    "class": "sticky-top"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(4, function (index) {
+    "class": "sticky-top",
+    count: $props.count
+  }, null, 8
+  /* PROPS */
+  , ["count"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(4, function (index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, _hoisted_9);
   }), 64
   /* STABLE_FRAGMENT */
   ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(8, function (index) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, _hoisted_15);
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      type: "button",
+      onClick: _cache[0] || (_cache[0] = function ($event) {
+        return $options.addCart();
+      }),
+      "class": "btn btn-primary flex-fill ms-1",
+      style: {
+        "border-radius": "30px"
+      }
+    }, "Add to cart")])])])]);
   }), 64
   /* STABLE_FRAGMENT */
   ))])])])])])]);

@@ -18,3 +18,4 @@ use App\Http\Controllers\ShoppingCartController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/card', [ShoppingCartController::class, 'index'])->name('cart.index');
 Route::get('/pay', [ShoppingCartController::class, 'pay'])->name('cart.pay');
+Route::get('/add/card', [ShoppingCartController::class, 'addCard'])->name('add.card');

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Navbar class="sticky-top"></Navbar>
+        <Navbar class="sticky-top" :count="count"></Navbar>
         <section>
             <div class="container py-5">
                 <div class="row">
@@ -65,7 +65,7 @@
                                             250.00 บาท
                                         </span>
                                         <div class="d-flex flex-row mt-4">
-                                            <button type="button" class="btn btn-primary flex-fill ms-1" style="border-radius: 30px;">Add to cart</button>
+                                            <button type="button" @click="addCart()" class="btn btn-primary flex-fill ms-1" style="border-radius: 30px;">Add to cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -81,10 +81,6 @@
 </template>
 
 <script>
-// import {inject, reactive} from "vue";
-// import {Inertia} from "@inertiajs/inertia";
-// import {usePage} from "@inertiajs/inertia-vue3";
-// import Navbar from '@Pages/Home/Navbar'
 import Navbar from "../../Layouts/Navbar";
 
 export default {
@@ -92,7 +88,17 @@ export default {
         Navbar
     },
     props: {
-        // errors: Object
+        count: Number
+    },
+    data() {
+        return {
+            countTotal: this.count ? this.count : 0
+        }
+    },
+    methods : {
+        addCart(){
+            this.$inertia.get(this.route('add.card'));
+        }
     }
 }
 </script>

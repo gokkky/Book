@@ -90,7 +90,7 @@ export default {
         
     },
     methods : {
-        submit(code){
+        submit(){
             this.$inertia.get(this.route('cart.pay'), {
             });
         }
