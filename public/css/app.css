@@ -1,0 +1,37 @@
+
+body {
+    /* font-family: "Times New Roman", Times, serif; */
+    /* font-family: "Angsana New"; */
+    /* font-family: 'Mali', cursive; */
+    font-family: 'Kanit', sans-serif;
+   /* font-family: 'Mali', cursive; */
+}
+
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -10px;
+    left: -9px;
+    border-radius: 10px;
+    color: white;
+ }
+
+ .badge-range{
+    background: rgb(197 130 180);
+    position: relative;
+    top: -442px;
+    left: 141px;
+    border-radius: 20px;
+    color: white;
+    font-size: 22px;
+ }
+
+ .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+.avatar {
+   border-radius: 50%;
+ }
